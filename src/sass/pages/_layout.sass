@@ -1,0 +1,91 @@
+//@layout
+
+.wrapper
+
+.header
+	margin: 
+		bottom: rem(55px)
+	background: #666
+
+	.header-top
+		
+		.header-logo
+			float: left
+			width: 30%
+			height: rem(46px)
+			background: #00CCFF
+		.header-search
+			@extend .header-logo
+			width: 40%
+			background: #006699
+		.header-banner
+			@extend .header-logo
+			width: 30%
+			background: #FF00CC
+		&::after 
+			@extend %clearfix
+
+	.header-bottom
+		background: pink
+		.nav-left
+			float: left
+			width: 30%
+			height: rem(53px)
+			background: #00CCFF
+		.nav-right
+			@extend .nav-left
+			width: 40%
+			background: #006699
+		.nav-center
+			@extend .nav-left
+			width: 30%
+			background: #FF00CC
+
+		&::after
+			@extend %clearfix
+
+#main
+
+	.goods-title
+		text-align: center
+		+font-size(20px)
+		font-weight: 100
+		transition: all 0.3s ease-out
+		margin:
+			bottom: rem(32px)
+		+font-size(37px)
+		.goods-small-title
+			+font-size(37px)
+			font-weight: 100
+
+	.goods-tab-list
+		text-align: center
+		li
+			display: inline-block
+			padding:
+				right: rem(44px)
+			a
+				+font-size(20px)
+				color: $color-black
+		&::after
+			@extend %clearfix
+
+	.goods-tab-list-fixed
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		padding:
+			top: rem(20px)
+			bottom: rem(20px)
+		border:
+			bottom: 1px solid $color-tab-bottom
+		background: $color-white
+		box-shadow: 0 1px 100px rgba(0,0,0,0.1)
+		transition: all 0.2s ease-out
+
+	.goods-tab-contents
+		margin: 
+			left: auto 
+			right: auto
+		width: rem(1200px)
